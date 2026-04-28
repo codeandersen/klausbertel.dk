@@ -1,0 +1,263 @@
+---
+import Layout from '../../components/Layout.astro';
+
+const references = [
+  { 
+    name: "Falck Healthcare", 
+    url: "/references/FalckHealthcare.pdf",
+    hasFile: true
+  },
+  { 
+    name: "Thisted Kommune", 
+    url: "#thisted-kommune",
+    hasFile: false,
+    hasDetailedReference: true
+  },
+  { 
+    name: "Handelsbanken", 
+    url: null,
+    hasFile: false
+  },
+  { 
+    name: "Siemens Danmark", 
+    url: "/references/Siemens-Stress-fordrag.pdf",
+    hasFile: true
+  },
+  { 
+    name: "Prodesign Denmark", 
+    url: null,
+    hasFile: false
+  },
+];
+---
+
+<Layout title="Virksomhedsreferencer - Psykolog Klaus Bertel">
+  <section class="py-16 bg-gradient-to-br from-primary-50 to-forest-50">
+    <div class="container-custom">
+      <h1 class="text-4xl md:text-5xl font-bold text-forest-900 mb-4">Virksomhedsreferencer</h1>
+      <p class="text-xl text-gray-700">Samarbejde med virksomheder og organisationer</p>
+    </div>
+  </section>
+  
+  <section class="py-16">
+    <div class="container-custom max-w-4xl">
+      <div class="prose prose-lg max-w-none">
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-forest-900 mb-6">Virksomheder og Organisationer</h2>
+          <p class="text-gray-700 mb-6">
+            Jeg har gennem årene samarbejdet med en række virksomheder og organisationer om 
+            psykologisk rådgivning, supervision og undervisning.
+          </p>
+          <ul class="space-y-4">
+            {references.map(ref => (
+              <li class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <div class="w-12 h-12 bg-forest-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow">
+                  {ref.hasFile ? (
+                    <a href={ref.url} target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-primary-700 hover:underline">
+                      {ref.name}
+                    </a>
+                  ) : ref.hasDetailedReference ? (
+                    <a href={ref.url} class="text-lg font-semibold text-primary-700 hover:underline">
+                      {ref.name}
+                    </a>
+                  ) : (
+                    <span class="text-lg font-semibold text-forest-900">{ref.name}</span>
+                  )}
+                  {ref.hasFile && (
+                    <p class="text-sm text-gray-600 mt-1">Se reference (PDF)</p>
+                  )}
+                  {ref.hasDetailedReference && (
+                    <p class="text-sm text-gray-600 mt-1">Se detaljeret anbefaling nedenfor</p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-forest-900 mb-4">Erhvervssamarbejde</h2>
+          <p class="text-gray-700 mb-4">
+            Mit arbejde med virksomheder omfatter blandt andet:
+          </p>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-forest-700 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Kriseberedskab og akut krisehåndtering</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-forest-700 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Stresshåndtering og trivselsindsatser</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-forest-700 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Supervision af medarbejdere og ledere</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-forest-700 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Undervisning og foredrag om psykologiske emner</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-forest-700 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Rådgivning om arbejdsmiljø og mental sundhed</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div id="thisted-kommune" class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-forest-900 mb-6">Anbefaling - Thisted Kommune</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="mb-4">
+              Klaus Bertel har siden 1992 afholdt kurser for Thisted Kommune, som ekstern underviser.
+            </p>
+            
+            <h3 class="text-lg font-semibold text-forest-900 mt-6 mb-3">Emnerne har gennem årene været:</h3>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Afværge voldsepisoder</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Bearbejdning af situationer fra tidligere voldstilfælde/trusler om vold</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Forebyggelse af voldsepisoder</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Forebyggelse af konfliktsituationer i forhold til borgere og brugere</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Stresshåndtering</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Konflikthåndtering</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Psykisk førstehjælp</span>
+              </li>
+            </ul>
+            
+            <p class="mb-4">
+              Indenfor hvert emne har der været mange hold, eftersom tilslutningen fra Thisted Kommunes medarbejdere og ledere, hver gang har været meget stor.
+            </p>
+            
+            <p class="mb-4">
+              Klaus Bertel har gennem alle årene været en afholdt underviser, som har høstet mange roser fra deltagerne. Han har gennem alle årene udviklet sig fagligt, og kurserne indeholder altid nyeste teoretiske viden. Derudover er han altid lydhør og imødekommende overfor ønsker fra os som kursusudbydere.
+            </p>
+            
+            <p class="mb-4">
+              Klaus Bertel er hurtig til at lave en forventningsafstemning ved kursusstart, således at det enkelte kursus bliver drejet i forhold til kursisternes forventninger og ønsker.
+            </p>
+            
+            <p class="mb-4">
+              Klaus Bertel formår at skabe en stemning, der indgyder kursisterne tillid og tryghed således, at det enkelte kursus bliver nærværende og udbytterigt. Han evner at favne den enkelte kursist så alle føler sig set og hørt, uden enkeltpersoner overtager styringen.
+            </p>
+            
+            <div class="bg-primary-50 border-l-4 border-primary-700 p-6 my-6">
+              <p class="mb-4">
+                Klaus Bertel har udover undervisning været tilknyttet Thisted Kommune som fast psykolog i forbindelse med krisebehandling af medarbejdere fra 16. marts 1993 – 31. december 2003.
+              </p>
+              <p class="mb-4">
+                Thisted Kommune var yderst tilfreds med responstiden, servicen og medarbejdernes udbytte i forbindelse med krisebehandling. Aftalen ophørte da Klaus Bertel solgte konceptet til Falck Healthcare.
+              </p>
+            </div>
+            
+            <p class="font-semibold text-forest-900">
+              Vi kan på det varmeste anbefale Klaus Bertel til andre og vil fremover stadig benytte ham som underviser på vores interne kurser.
+            </p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-2xl font-bold text-forest-900 mb-4">Tilknytninger</h2>
+          <div class="space-y-6">
+            <div class="border-l-4 border-forest-700 pl-6 py-2">
+              <h3 class="text-lg font-semibold text-forest-900">Falck Healthcare</h3>
+              <p class="text-gray-700 mt-2">
+                Tilknyttet som psykolog med fokus på krisepsykologi og akut hjælp.
+              </p>
+            </div>
+            
+            <div class="border-l-4 border-forest-700 pl-6 py-2">
+              <h3 class="text-lg font-semibold text-forest-900">Belastningspsykologisk Institut</h3>
+              <p class="text-gray-700 mt-2">
+                Konsulent med speciale i belastningsreaktioner og traumebehandling.
+              </p>
+            </div>
+            
+            <div class="border-l-4 border-forest-700 pl-6 py-2">
+              <h3 class="text-lg font-semibold text-forest-900">Foreningen af Speciallæger (FAS)</h3>
+              <p class="text-gray-700 mt-2">
+                Tilknyttet som specialist i psykoterapi.
+              </p>
+            </div>
+            
+            <div class="border-l-4 border-forest-700 pl-6 py-2">
+              <h3 class="text-lg font-semibold text-forest-900">LGBT+ Organisation</h3>
+              <p class="text-gray-700 mt-2">
+                Samarbejde om psykologisk støtte til LGBT+ personer.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-forest-50 rounded-lg p-8">
+          <h2 class="text-2xl font-bold text-forest-900 mb-4">Interesseret i samarbejde?</h2>
+          <p class="text-gray-700 mb-6">
+            Kontakt mig for en uforpligtende samtale om, hvordan jeg kan hjælpe din virksomhed 
+            eller organisation med psykologisk rådgivning, supervision eller undervisning.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="mailto:klaus@arospsyk.dk" class="btn-primary">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              Send email
+            </a>
+            <a href="sms:+4520521981" class="btn-secondary">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+              </svg>
+              Send SMS
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

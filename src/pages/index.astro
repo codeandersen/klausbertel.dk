@@ -1,0 +1,145 @@
+---
+import Layout from '../components/Layout.astro';
+import Hero from '../components/Hero.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+---
+
+<Layout title="Forside - Psykolog Klaus Bertel">
+  <Hero />
+  
+  <section class="py-16 bg-gray-50">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <FeatureCard 
+          icon="specialist"
+          title="Erfaren specialist"
+          description="Mere end 25 års erfaring i psykologisk behandling"
+        />
+        <FeatureCard 
+          icon="heart"
+          title="Tryg og respektfuld"
+          description="Du mødes med empati, fortrolighed og nærvær"
+        />
+        <FeatureCard 
+          icon="holistic"
+          title="Helhedsorienteret tilgang"
+          description="Fokus på sammenhængen mellem tanker, følelser og trivsel"
+        />
+        <FeatureCard 
+          icon="lock"
+          title="Fortrolighed"
+          description="Alle samtaler foregår under fuld fortrolighed"
+        />
+        <FeatureCard 
+          icon="people"
+          title="LGBT+ venlig"
+          description="Jeg har særlig erfaring med LGBT+ unge og voksne"
+        />
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="flex flex-col lg:flex-row gap-8 items-start">
+        <div class="flex-shrink-0">
+          <div class="w-64 h-64 rounded-full overflow-hidden bg-white shadow-xl">
+            <img 
+              src="/images/profile.jpg" 
+              alt="Klaus Bertel" 
+              class="w-full h-full object-contain"
+            />
+          </div>
+        </div>
+        
+        <div class="flex-grow">
+          <h2 class="text-3xl font-bold text-forest-900 mb-6">Om klinikken</h2>
+          <div class="prose prose-lg">
+            <p class="text-gray-700 mb-4">
+              Jeg er autoriseret psykolog med mere end 25 års erfaring inden for behandling af stress, angst, depression, kriser, 
+              livskriser og akutte livs betingelser. Jeg tilbyder både samtale-terapi, krisepsykologi hjælp og supervision.
+            </p>
+            <p class="text-gray-700 mb-4">
+              Klinikken ligger i hjertet af Aarhus – tæt ved Bruuns Galleri og lige overfor Lagkagehuset. Der er altid diskret, 
+              respekt og fokus på det individuelle behov.
+            </p>
+            
+            <div class="bg-forest-50 border-l-4 border-forest-700 p-4 my-6">
+              <h3 class="font-semibold text-forest-900 mb-3">Specialer:</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Specialist i psykoterapi</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Krisepsykolog</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Supervision og undervisning</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Faglig formidling</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Individuel og gruppebaseret terapi</span>
+                </li>
+              </ul>
+            </div>
+            
+            <a href="/cv" class="btn-secondary">
+              Læs mere om mig
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-16 bg-primary-50">
+    <div class="container-custom">
+      <h2 class="text-3xl font-bold text-forest-900 mb-8 text-center">Tidsbestilling og tilskud</h2>
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <p class="text-gray-700 mb-4">
+            Alle kan bestille tid til samtale i klinikken. Hvis du er henvist af din egen læge, yder staten tilskud til behandlingen. 
+            Derudover yder Sygeforsikringen Danmark også tilskud, hvis du er medlem.
+          </p>
+          <p class="text-gray-700 mb-6">
+            Har du en sundhedsforsikring, eller ønsker du at betale som privat klient, er det naturligvis også muligt.
+          </p>
+          
+          <div class="bg-forest-50 rounded-lg p-6">
+            <h3 class="font-semibold text-forest-900 mb-3">Kontakt</h3>
+            <p class="text-gray-700 mb-4">
+              Du er naturligvis meget velkommen til at henvende dig. Jeg træffes nemmest via SMS på:
+            </p>
+            <a href="sms:+4520521981" class="text-2xl font-bold text-forest-700 hover:text-forest-800">
+              +45 20 52 19 81
+            </a>
+            <p class="text-gray-600 mt-4">
+              Jeg glæder mig til at høre fra dig.
+            </p>
+            <p class="text-gray-600 mt-2">
+              Bedste hilsner,<br>
+              <strong>Klaus</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

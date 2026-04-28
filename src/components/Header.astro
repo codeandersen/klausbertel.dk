@@ -1,0 +1,55 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { href: '/', label: 'Forside' },
+  { href: '/kurser', label: 'Kurser' },
+  { href: '/cv', label: 'CV' },
+  { href: '/kursusbeviser', label: 'Kursusbeviser' },
+  { href: '/referencer', label: 'Referencer' },
+  { href: '/kontakt-info', label: 'Kontakt info' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 py-4">
+  <div class="container-custom">
+    <nav class="bg-white rounded-2xl shadow-lg px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-forest-700 rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold text-forest-900">Psykolog Klaus Bertel</h1>
+          <p class="text-sm text-gray-600">Specialist i psykologisk behandling</p>
+        </div>
+      </div>
+      
+      <ul class="hidden lg:flex items-center gap-6">
+        {navItems.map(item => (
+          <li>
+            <a 
+              href={item.href}
+              class={`text-sm font-medium transition-colors duration-200 ${
+                currentPath === item.href 
+                  ? 'text-forest-700 border-b-2 border-forest-700' 
+                  : 'text-gray-700 hover:text-forest-700'
+              }`}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      
+      <button class="lg:hidden p-2" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="h-24"></div>

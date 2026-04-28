@@ -1,0 +1,206 @@
+---
+import Layout from '../components/Layout.astro';
+
+const certificates = {
+  autorisationer: [
+    { title: "Psykolognævnet Autorisationsbevis", url: "/certificates/Psykolognaevnet-Autorisationsbevis.pdf" },
+    { title: "Akkrediteringsbevis", url: "/certificates/Akkrediteringsbevis.pdf" },
+  ],
+  supervision: [
+    { title: "2023-11 – Supervision – Monica Trærup", url: "/certificates/202311-Supervision-Monica-Traerup.pdf" },
+    { title: "Supervision – Psykoterapi – Sundhedspsykologi", url: "/certificates/Supervision-Psykoterapi-Sundhedspsykologi.pdf" },
+    { title: "Supervision – Thomas Iversen", url: "/certificates/Supervision-Thomas-Iversen.pdf" },
+    { title: "Supervision – Kreta – Thomas Iversen", url: "/certificates/Supervision-Kreta-Thomas-Iversen.pdf" },
+    { title: "Supervision – Palle Isbrandt Jansen", url: "/certificates/Supervision-Palle-Isbrandt-Jansen.pdf" },
+    { title: "Supervision – Guldager Erhvervspsykologi", url: "/certificates/Supervision-Guldager-Erhvervspsykologi.pdf" },
+    { title: "Supervision – Kropsorienteret supervision i gruppe – Erik Elnegaard", url: "/certificates/Supervision-Kropsorienteret-supervision-i-gruppe-Erik-Elnegaard.pdf" },
+    { title: "Supervision – Lisebeth Dissing 2015", url: "/certificates/Supervision-Lisebeth-Dissing-2015.jpg" },
+    { title: "Supervision – Lisbeth Dissing 2019", url: "/certificates/Supervision-Lisbeth-Dissing-2019.jpg" },
+    { title: "Supervision – Jeg går i gruppe supervision hos Specialist i psykoterapi Monica Trærup, Århus", url: null },
+  ],
+  danskPsykologForening: [
+    { title: "Supervision og psykologfaglig vejledning af yngre kandidater", url: "/certificates/DPF-Supervision-og-psykologfaglig-vejledning.pdf" },
+    { title: "Krise- og katastrofearbejde", url: "/certificates/DPF-Krise-og-katastrofearbejde.pdf" },
+    { title: "ICD-10 dianosticeringssystemet", url: "/certificates/DPF-ICD-10-dianosticeringssystemet.pdf" },
+    { title: "Neuropsykologisk Undersøgelse", url: "/certificates/DPF-Neuropsykologisk-Undersoegelse.pdf" },
+    { title: "Interaktion mellem krop og psyke set ud fra psykomatiske lidelser", url: "/certificates/DPF-Interaktion-mellem-krop-og-psyke.pdf" },
+    { title: "Specialist i Psykotraumatologi", url: "/certificates/DPF-Specialist-i-Psykotraumatologi.pdf" },
+    { title: "Introduktionskursus i udfærdigelse af erklæringer og skriftlige udtalelser", url: "/certificates/DPF-Introduktionskursus-erklaeringar.pdf" },
+    { title: "Depressionsbehandling med IPT – Interpersonal Psykoterapi", url: "/certificates/DPF-Depressionsbehandling-IPT.pdf" },
+  ],
+  diplomer: [
+    { title: "Falck Healthcare seminar 7-8 november 2003", url: "/certificates/Diplom-Falck-Healthcare-2003.pdf" },
+    { title: "Falck Healthcare – Hvad sker der på den krisepsykologiske front – teoretisk", url: "/certificates/Diplom-Falck-Healthcare-krisepsykologisk-front.pdf" },
+    { title: "Stressvejlederuddannelsen – Center for stress", url: "/certificates/Diplom-Stressvejlederuddannelsen.pdf" },
+    { title: "Stressvejlederuddannelsen november 2007 – Center for stress", url: "/certificates/Diplom-Stressvejlederuddannelsen-2007.pdf" },
+  ],
+  kursusbeviser: [
+    { title: "Acceptance and Commitment Therapy (ACT)", url: "/certificates/Kursusbevis-ACT-2024.pdf" },
+    { title: "Trænings- og supervisiongruppe i Kognitiv Terapi", url: "/certificates/Kursusbevis-Kognitiv-Terapi.pdf" },
+    { title: "OCD – Per Hove Thomsen", url: "/certificates/Kursusbevis-OCD.pdf" },
+    { title: "Meditation – Kirsten Dreyer", url: "/certificates/Kursusbevis-Meditation.pdf" },
+    { title: "Psykologisk Debriefing – Jakob Inge Kristoffersen", url: "/certificates/Kursusbevis-Psykologisk-Debriefing.pdf" },
+    { title: "Sorg og krise hos voksne – Jakob Inge Kristoffersen", url: "/certificates/Kursusbevis-Sorg-og-krise.pdf" },
+    { title: "Intervention i grupper og organisationer – Ståle Einarsen", url: "/certificates/Kursusbevis-Intervention-grupper.pdf" },
+    { title: "Using Cognitive Behavioral Therapy with PTSD patients – David W. Foy", url: "/certificates/Kursusbevis-CBT-PTSD.pdf" },
+    { title: "Nyere stressfænomener og ændringer i work-life balancen – Ståle Einarsen", url: "/certificates/Kursusbevis-Stress-work-life.pdf" },
+    { title: "Krisestyring – ledelse af bistandsarbejde – Jakob Inge Kristoffersen", url: "/certificates/Kursusbevis-Krisestyring.pdf" },
+    { title: "Sorg og Depression – Psykologhuset Sonja Jensen", url: "/certificates/Kursusbevis-Sorg-Depression.pdf" },
+    { title: "Behandling af stresssymptomer og udbrændthedstilstande – Giorgio Grossi", url: "/certificates/Kursusbevis-Stresssymptomer.pdf" },
+    { title: "IMAGO – Falck Healthcare", url: "/certificates/Kursusbevis-IMAGO.pdf" },
+    { title: "Den tredje bølge i kognitiv adfærdspskologisk behandling af stress og langvarig smerte – Giorgio Grossi", url: "/certificates/Kursusbevis-Tredje-boelge-kognitiv.pdf" },
+    { title: "How to respond from a pcychological point of view – When disaster or major incidents strikes – David Bolton", url: "/certificates/Kursusbevis-Disaster-response.pdf" },
+    { title: "Den dygtige medarbejder – Ståle Einarsen", url: "/certificates/Kursusbevis-Dygtige-medarbejder.pdf" },
+    { title: "Stress i en organisatorisk kontekst – Falck Healthcare", url: "/certificates/Kursusbevis-Stress-organisatorisk.pdf" },
+    { title: "Early intervention after trauma workshop – Richard Bryant", url: "/certificates/Kursusbevis-Early-intervention-trauma.pdf" },
+    { title: "Early intervention The way forward – Jonathan Bisson", url: "/certificates/Kursusbevis-Early-intervention-forward.pdf" },
+    { title: "Acceptance and Commitment Therapy – Falck Healthcare", url: "/certificates/Kursusbevis-ACT-Falck.pdf" },
+    { title: "Behandling af udmattelse – udbrændthed og andre stressrelaterede lidelser – Giorgio Grossi", url: "/certificates/Kursusbevis-Udmattelse.pdf" },
+    { title: "Søredning STCW – Falck Nutec", url: "/certificates/Kursusbevis-Soeredning.pdf" },
+    { title: "Behandling af stressramte – SEBC", url: "/certificates/Kursusbevis-Stressramte.pdf" },
+    { title: "Psykotraumatologien anno 2012 – Falck Healthcare", url: "/certificates/Kursusbevis-Psykotraumatologi-2012.pdf" },
+    { title: "Psykotraumatologien anno 2012-2 – Falck Healthcare", url: "/certificates/Kursusbevis-Psykotraumatologi-2012-2.pdf" },
+    { title: "Naturlig og kompliceret sorg hos voksne – Falck Healthcare", url: "/certificates/Kursusbevis-Sorg-voksne.pdf" },
+    { title: "Treating Traumatized Veterans and Serving Soldiers", url: "/certificates/Kursusbevis-Veterans.pdf" },
+    { title: "Funktionel neuroanatomi human neurobiologi", url: "/certificates/Kursusbevis-Neuroanatomi.pdf" },
+    { title: "Psykologens arbejde med smerteplagede og somatiske klienter", url: "/certificates/Kursusbevis-Smerteplagede.pdf" },
+    { title: "Klinisk sexologi", url: "/certificates/Kursusbevis-Sexologi.pdf" },
+    { title: "Angst og Depression", url: "/certificates/Kursusbevis-Angst-Depression.jpg" },
+    { title: "Intensiv Dynamisk Korttidsterapi", url: "/certificates/Kursusbevis-Dynamisk-Korttidsterapi.jpg" },
+    { title: "Kognitiv adfærdsterapi Voksenområdet", url: "/certificates/Kursusbevis-Kognitiv-adfaerdsterapi.jpg" },
+    { title: "Metakognitiv terapi mod depression", url: "/certificates/Kursusbevis-Metakognitiv-terapi.jpg" },
+    { title: "Neuroaffektiv udviklingspsykologi i praksis", url: "/certificates/Kursusbevis-Neuroaffektiv.jpg" },
+    { title: "Present State Examination", url: "/certificates/Kursusbevis-Present-State.jpg" },
+    { title: "Psykofarmakologi for voksne", url: "/certificates/Kursusbevis-Psykofarmakologi.jpg" },
+    { title: "Psykologisk behandlings og støttetilbud til pårørende til mennesker med demens", url: "/certificates/Kursusbevis-Demens-paaroerende.jpg" },
+    { title: "Sygemeldtes tilbagevenden til arbejdet", url: "/certificates/Kursusbevis-Sygemeldtes-tilbagevenden.jpg" },
+    { title: "Three Steps to Superior Performance", url: "/certificates/Kursusbevis-Superior-Performance.jpg" },
+    { title: "Trauma mentalizing and attachment", url: "/certificates/Kursusbevis-Trauma-mentalizing.jpg" },
+    { title: "Egenomsorg for psykologer", url: "/certificates/Kursusbevis-Egenomsorg.pdf" },
+    { title: "Hypnoterapi og selvhypnose del 1", url: "/certificates/Kursusbevis-Hypnoterapi-del1.pdf" },
+    { title: "Hypnoterapi og selvhypnose del 2", url: "/certificates/Kursusbevis-Hypnoterapi-del2.pdf" },
+  ],
+  konsulent: [
+    { title: "2018 – Konsulent for LGBT gruppen Sabaah, Århus", url: null },
+    { title: "2019 – Konsulent for Institut for belastnings psykologi", url: null },
+  ],
+};
+---
+
+<Layout title="Anbefalinger og kursusbeviser - Psykolog Klaus Bertel">
+  <section class="py-16 bg-gradient-to-br from-primary-50 to-forest-50">
+    <div class="container-custom">
+      <h1 class="text-4xl md:text-5xl font-bold text-forest-900 mb-4">Anbefalinger og kursusbeviser</h1>
+      <p class="text-xl text-gray-700">Dokumentation for autorisationer, efteruddannelse og specialisering</p>
+    </div>
+  </section>
+  
+  <section class="py-16">
+    <div class="container-custom max-w-5xl">
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-bold text-forest-900 mb-6">Autorisationer</h2>
+        <ul class="space-y-3">
+          {certificates.autorisationer.map(cert => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              {cert.url ? (
+                <a href={cert.url} target="_blank" rel="noopener noreferrer" class="text-primary-700 hover:underline">
+                  {cert.title}
+                </a>
+              ) : (
+                <span class="text-gray-700">{cert.title}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-bold text-forest-900 mb-6">Supervision</h2>
+        <ul class="space-y-3">
+          {certificates.supervision.map(cert => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-primary-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+              {cert.url ? (
+                <a href={cert.url} target="_blank" rel="noopener noreferrer" class="text-primary-700 hover:underline">
+                  {cert.title}
+                </a>
+              ) : (
+                <span class="text-gray-700">{cert.title}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-bold text-forest-900 mb-6">Dansk Psykolog Forening – Kurser</h2>
+        <ul class="space-y-3">
+          {certificates.danskPsykologForening.map(cert => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <a href={cert.url} target="_blank" rel="noopener noreferrer" class="text-primary-700 hover:underline">
+                {cert.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-bold text-forest-900 mb-6">Diplomer</h2>
+        <ul class="space-y-3">
+          {certificates.diplomer.map(cert => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-primary-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+              </svg>
+              <a href={cert.url} target="_blank" rel="noopener noreferrer" class="text-primary-700 hover:underline">
+                {cert.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-bold text-forest-900 mb-6">Kursusbeviser</h2>
+        <p class="text-gray-700 mb-6">
+          Omfattende efteruddannelse inden for psykoterapi, traumebehandling, stresshåndtering og specialiserede behandlingsmetoder.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {certificates.kursusbeviser.map(cert => (
+            <div class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-forest-700 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <a href={cert.url} target="_blank" rel="noopener noreferrer" class="text-sm text-primary-700 hover:underline">
+                {cert.title}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="bg-forest-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-forest-900 mb-6">Konsulent Tilknytninger</h2>
+        <ul class="space-y-3">
+          {certificates.konsulent.map(cert => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              <span class="text-gray-700">{cert.title}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+</Layout>
