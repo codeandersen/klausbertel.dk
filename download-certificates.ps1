@@ -33,7 +33,7 @@ $certificates = @(
     @{ url = "https://www.klausbertel.dk/wp-content/uploads/2017/09/Dansk-Psykolog-Forening-Neuropsykologisk-Unders%C3%B8gelse.pdf"; filename = "DPF-Neuropsykologisk-Undersoegelse.pdf" },
     @{ url = "https://www.klausbertel.dk/wp-content/uploads/2017/09/Dansk-Psykolog-Forening-Interaktion-mellem-krop-og-psyke-set-ud-fra-psykomatiske-lidelser.pdf"; filename = "DPF-Interaktion-mellem-krop-og-psyke.pdf" },
     @{ url = "https://www.klausbertel.dk/wp-content/uploads/2017/09/Dansk-Psykolog-Forening-Specialist-i-Psykotraumatologi.pdf"; filename = "DPF-Specialist-i-Psykotraumatologi.pdf" },
-    @{ url = "https://www.klausbertel.dk/wp-content/uploads/2017/09/Dansk-Psykolog-Forening-Introduktionskursus-i-udf%C3%A6rdigelse-af-erkl%C3%A6ringer-og-skriftlige-udtalelser.pdf"; filename = "DPF-Introduktionskursus-erkl aeringer.pdf" },
+    @{ url = "https://www.klausbertel.dk/wp-content/uploads/2017/09/Dansk-Psykolog-Forening-Introduktionskursus-i-udf%C3%A6rdigelse-af-erkl%C3%A6ringer-og-skriftlige-udtalelser.pdf"; filename = "DPF-Introduktionskursus-erklaeringer.pdf" },
     @{ url = "https://www.klausbertel.dk/wp-content/uploads/2017/09/Dansk-Psykolog-Forening-Depressionsbehandling-med-IPT-Interpersonal-Psykoterapi.pdf"; filename = "DPF-Depressionsbehandling-IPT.pdf" },
     
     # Diplomer

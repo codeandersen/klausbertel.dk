@@ -7,38 +7,6 @@ import FeatureCard from '../components/FeatureCard.astro';
 <Layout title="Forside - Psykolog Klaus Bertel">
   <Hero />
   
-  <section class="py-16 bg-gray-50">
-    <div class="container-custom">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-        <FeatureCard 
-          icon="specialist"
-          title="Erfaren specialist"
-          description="Mere end 25 års erfaring i psykologisk behandling"
-        />
-        <FeatureCard 
-          icon="heart"
-          title="Tryg og respektfuld"
-          description="Du mødes med empati, fortrolighed og nærvær"
-        />
-        <FeatureCard 
-          icon="holistic"
-          title="Helhedsorienteret tilgang"
-          description="Fokus på sammenhængen mellem tanker, følelser og trivsel"
-        />
-        <FeatureCard 
-          icon="lock"
-          title="Fortrolighed"
-          description="Alle samtaler foregår under fuld fortrolighed"
-        />
-        <FeatureCard 
-          icon="people"
-          title="LGBT+ venlig"
-          description="Jeg har særlig erfaring med LGBT+ unge og voksne"
-        />
-      </div>
-    </div>
-  </section>
-  
   <section class="py-16">
     <div class="container-custom">
       <div class="flex flex-col lg:flex-row gap-8 items-start">
@@ -56,7 +24,7 @@ import FeatureCard from '../components/FeatureCard.astro';
           <h2 class="text-3xl font-bold text-forest-900 mb-6">Om klinikken</h2>
           <div class="prose prose-lg">
             <p class="text-gray-700 mb-4">
-              Jeg er autoriseret psykolog med mere end 25 års erfaring inden for behandling af stress, angst, depression, kriser, 
+              Mit navn er Klaus Bertel og jeg er autoriseret psykolog med bred klinisk erfaring inden for behandling af stress, angst, depression, kriser, 
               livskriser og akutte livs betingelser. Jeg tilbyder både samtale-terapi, krisepsykologi hjælp og supervision.
             </p>
             <p class="text-gray-700 mb-4">
@@ -109,6 +77,31 @@ import FeatureCard from '../components/FeatureCard.astro';
     </div>
   </section>
   
+  <section class="py-16 bg-gray-50">
+    <div class="container-custom max-w-4xl">
+      <h2 class="text-3xl font-bold text-forest-900 mb-8 text-center">Erfaring og tilgang</h2>
+      <div class="bg-white rounded-lg shadow-md p-8">
+        <div class="prose prose-lg max-w-none">
+          <p class="text-gray-700 mb-4">
+            Jeg har, som det fremgår af referencerne, bred klinisk erfaring, herunder mange års arbejde med henvisninger fra læger og tilknytning til sygesikringen.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Jeg er uddannet i og har særlig erfaring med behandling af angst, depression, stress og kriser, herunder både livskriser og akut krisehjælp. Jeg er desuden tilknyttet Falck Healthcare.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Jeg er konsulent i Belastningspsykologisk Institut og tillige tilknyttet FAS – Foreningen af Speciallæger.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Derudover samarbejder jeg med en LGBT+ organisation.
+          </p>
+          <p class="text-gray-700">
+            Jeg arbejder i en åben dialog med mine klienter, da det er vigtigt for mig, at de føler dig trygge og bliver en aktiv medspiller i forløbet – og ALTID ved, hvor de har mig.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <section class="py-16 bg-primary-50">
     <div class="container-custom">
       <h2 class="text-3xl font-bold text-forest-900 mb-8 text-center">Tidsbestilling og tilskud</h2>
@@ -139,6 +132,85 @@ import FeatureCard from '../components/FeatureCard.astro';
             </p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-16">
+    <div class="container-custom max-w-4xl">
+      <h2 class="text-3xl font-bold text-forest-900 mb-8 text-center">Henvisningsårsager fra læge</h2>
+      <div class="bg-white rounded-lg shadow-md p-8">
+        <p class="text-gray-700 mb-6">
+          Din læge kan henvise dig til psykolog af disse årsager:
+        </p>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Røveri-, volds- eller voldtægtsofre</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Trafik- og ulykkesofre (f.eks. trafikuheld)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Pårørende til alvorligt psykisk syge personer (f.eks. demens)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Personer ramt af alvorlig invaliderende sygdom (f.eks. kræft)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Pårørende til personer ramt af alvorlig invaliderende sygdom</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Pårørende ved dødsfald – behandlingen er for sorg – sorgreaktioner – tilpasningsreaktioner (nye livs betingelser)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Personer, der har forsøgt selvmord</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Kvinder der har fået foretaget provokeret abort efter 12. graviditets uge</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Personer, der før de fyldte 18 år, har været offer for incest eller andre seksuelle overgreb</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Depression – let til moderat depression</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-forest-700 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Angst – let til moderat angst</span>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
