@@ -6,9 +6,17 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
 }
 
-const { title, description = 'Psykolog Klaus Bertel - Specialist i psykologisk behandling' } = Astro.props;
+const { 
+  title, 
+  description = 'Psykolog Klaus Bertel - Specialist i psykologisk behandling af stress, angst, depression og kriser',
+  ogImage = '/images/og-image.jpg'
+} = Astro.props;
+
+const site = Astro.site || new URL('https://klausbertel.dk');
+const canonicalURL = new URL(Astro.url.pathname, site);
 ---
 
 <!DOCTYPE html>
@@ -18,6 +26,55 @@ const { title, description = 'Psykolog Klaus Bertel - Specialist i psykologisk b
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, site)} />
+    <meta property="og:locale" content="da_DK" />
+    
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(ogImage, site)} />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Psykolog Klaus Bertel",
+      "description": "Specialist i psykologisk behandling af stress, angst, depression og kriser",
+      "url": "https://klausbertel.dk",
+      "telephone": "+4520521981",
+      "email": "klaus@arospsyk.dk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Telefontorvet 1, 2. sal",
+        "addressLocality": "Aarhus",
+        "postalCode": "8000",
+        "addressCountry": "DK"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "image": "https://klausbertel.dk/images/profile.jpg",
+      "priceRange": "DKK"
+    }
+    </script>
+    
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
