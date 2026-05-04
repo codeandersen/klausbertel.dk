@@ -1,5 +1,6 @@
 ---
 import Layout from '../../components/Layout.astro';
+import { getHref } from '../../utils/getHref';
 ---
 
 <Layout title="Kontakt info - Psykolog Klaus Bertel">
@@ -151,7 +152,7 @@ import Layout from '../../components/Layout.astro';
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <a href="/kontakt-info/afbudsregler" class="group">
+        <a href={getHref('/kontakt-info/afbudsregler')} class="group">
           <div class="bg-white rounded-lg shadow-md p-6 h-full hover:shadow-xl transition-shadow duration-300">
             <div class="flex items-start gap-4">
               <svg class="w-8 h-8 text-forest-700 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -165,7 +166,7 @@ import Layout from '../../components/Layout.astro';
           </div>
         </a>
         
-        <a href="/kontakt-info/privatlivspolitik" class="group">
+        <a href={getHref('/kontakt-info/privatlivspolitik')} class="group">
           <div class="bg-white rounded-lg shadow-md p-6 h-full hover:shadow-xl transition-shadow duration-300">
             <div class="flex items-start gap-4">
               <svg class="w-8 h-8 text-forest-700 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
