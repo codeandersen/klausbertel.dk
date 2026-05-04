@@ -1,6 +1,14 @@
 ---
 import Layout from '../../components/Layout.astro';
 
+const basePath = import.meta.env.BASE_URL || '/';
+const getUrl = (path: string | null) => {
+  if (!path) return null;
+  if (basePath === '/') return path;
+  const cleanBase = basePath.endsWith('/') ? basePath.slice(0, -1) : basePath;
+  return cleanBase + path;
+};
+
 const references = [
   { 
     name: "Falck Healthcare", 
@@ -58,11 +66,11 @@ const references = [
                 </div>
                 <div class="flex-grow">
                   {ref.hasFile ? (
-                    <a href={ref.url} target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-primary-700 hover:underline">
+                    <a href={getUrl(ref.url)} target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-primary-700 hover:underline">
                       {ref.name}
                     </a>
                   ) : ref.hasDetailedReference ? (
-                    <a href={ref.url} class="text-lg font-semibold text-primary-700 hover:underline">
+                    <a href={getUrl(ref.url)} class="text-lg font-semibold text-primary-700 hover:underline">
                       {ref.name}
                     </a>
                   ) : (

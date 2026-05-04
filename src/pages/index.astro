@@ -2,6 +2,9 @@
 import Layout from '../components/Layout.astro';
 import Hero from '../components/Hero.astro';
 import FeatureCard from '../components/FeatureCard.astro';
+
+const basePath = import.meta.env.BASE_URL || '/';
+const profileImageUrl = basePath === '/' ? '/images/profile.jpg' : basePath.replace(/\/$/, '') + '/images/profile.jpg';
 ---
 
 <Layout title="Forside - Psykolog Klaus Bertel">
@@ -13,7 +16,7 @@ import FeatureCard from '../components/FeatureCard.astro';
         <div class="flex-shrink-0">
           <div class="w-64 h-64 rounded-full overflow-hidden bg-white shadow-xl">
             <img 
-              src="/images/profile.jpg" 
+              src={profileImageUrl}
               alt="Klaus Bertel" 
               class="w-full h-full object-contain"
             />
