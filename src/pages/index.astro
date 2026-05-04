@@ -2,6 +2,7 @@
 import Layout from '../components/Layout.astro';
 import Hero from '../components/Hero.astro';
 import FeatureCard from '../components/FeatureCard.astro';
+import { getHref } from '../utils/getHref';
 
 const basePath = import.meta.env.BASE_URL || '/';
 const profileImageUrl = basePath === '/' ? '/images/profile.jpg' : basePath.replace(/\/$/, '') + '/images/profile.jpg';
@@ -73,7 +74,7 @@ const profileImageUrl = basePath === '/' ? '/images/profile.jpg' : basePath.repl
               </ul>
             </div>
             
-            <a href="/cv" class="btn-secondary">
+            <a href={getHref('/cv')} class="btn-secondary">
               Læs mere om mig
             </a>
           </div>
