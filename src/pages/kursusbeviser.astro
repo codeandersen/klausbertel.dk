@@ -4,6 +4,8 @@ import Layout from '../components/Layout.astro';
 const basePath = import.meta.env.BASE_URL || '/';
 const getUrl = (path: string) => {
   if (!path) return null;
+  // Don't modify anchor links
+  if (path.startsWith('#')) return path;
   if (basePath === '/') return path;
   const cleanBase = basePath.endsWith('/') ? basePath.slice(0, -1) : basePath;
   return cleanBase + path;
